@@ -5,10 +5,10 @@ This page shows the translation module training history.
 ## on 23.10.26
 - Job: `ftjob-sTy0XoGOAjBGugCzlIU6IlZ9`
 - Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8DpUIZAv` (23.10.25)
-- Model (*result*):
+- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8DsAygwF`
 - Training File: `file-pxHKrUtAfzSl6nkVE3K8fDzj`
-- Trained Tokens:
-- Cost: 
+- Trained Tokens: 23868
+- Cost: $0.2
 
 ## on 23.10.25
 
