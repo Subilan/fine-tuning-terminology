@@ -2,3 +2,6 @@ terminology.csv
 data.jsonl
 .vscode
 command-template
+translations
+literature.jsonl
+__pycache__
