@@ -110,6 +110,9 @@ def based(question, answer):
         {"role": "user", "content": question},
         {"role": "assistant", "content": answer}
     ]
+    
+def toJsonLine(obj):
+    return dumps({"messages": obj}, ensure_ascii=False) + "\n"
 
 
 remove("data.jsonl")
@@ -122,4 +125,4 @@ with open("data.jsonl", mode="a", encoding="utf-8") as file:
                 possible_questions[randint(0, len(possible_questions) - 1)].format(row["English"].lower()) + "\n\nTranslation:\n\n",
                 row["Chinese"] + " END"
             )
-            file.write(dumps({"messages": result}, ensure_ascii=False) + "\n")
+            file.write(toJsonLine(result))
