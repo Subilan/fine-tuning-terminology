@@ -1,7 +1,7 @@
 import csv
 from random import randint
-from json import dumps
 from os import remove
+from fn import toJsonLine, based
 
 possible_questions = [
     "What is the translation of the psychological term {0} in Chinese?",
@@ -104,20 +104,12 @@ possible_questions = [
 ]
 
 
-def based(question, answer):
-    return [
-        {"role": "system", "content": "Linga is a psychologist chatbot that can accurately translate the terminologies in literature in his area to Chinese."},
-        {"role": "user", "content": question},
-        {"role": "assistant", "content": answer}
-    ]
-    
-def toJsonLine(obj):
-    return dumps({"messages": obj}, ensure_ascii=False) + "\n"
+try:
+    remove("vocabulary.jsonl")
+except:
+    pass
 
-
-remove("data.jsonl")
-
-with open("data.jsonl", mode="a", encoding="utf-8") as file:
+with open("vocabulary.jsonl", mode="a", encoding="utf-8") as file:
     with open("terminology.csv", newline='') as translations:
         reader = csv.DictReader(translations)
         for row in reader:

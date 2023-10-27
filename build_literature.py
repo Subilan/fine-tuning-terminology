@@ -23,7 +23,10 @@ with open("translations/literature.txt", mode='r+') as literature:
         separated.append(parts)
         index += 1
         
-    remove("literature.jsonl")
+    try:
+        remove("literature.jsonl")
+    except:
+        pass
     
     with open("literature.jsonl", mode='a') as separated_literature:
         index = 0
