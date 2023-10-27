@@ -1,6 +1,6 @@
 import re
 import nltk
-from build_vocabulary import based, toJsonLine
+from fn import withRoles, toJsonl, removeReturn
 from os import remove
 
 with open("translations/literature.txt", mode='r+') as literature:
@@ -37,8 +37,8 @@ with open("translations/literature.txt", mode='r+') as literature:
                 for i in range(len(currentTargetEnglish) - 1): # minus 1 to adapt array index expression (0~len-1)
                     # separated_literature.write(currentTargetEnglish[i])
                     # separated_literature.write(currentTargetChinese[i])
-                    separated_literature.write(toJsonLine(based(
-                        "Please translate '{0}' into Chinese accurately.".format(currentTargetEnglish[i]),
-                        currentTargetChinese[i]
+                    separated_literature.write(toJsonl(withRoles(
+                        "Please translate the psychology literature paragraph '{0}' into Chinese accurately.".format(removeReturn(currentTargetEnglish[i])),
+                        removeReturn(currentTargetChinese[i])
                     )))
             index += 2
