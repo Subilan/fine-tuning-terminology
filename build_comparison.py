@@ -18,8 +18,10 @@ with open("comparison.jsonl", mode='a') as comparisonData:
     with open("comparison.csv", mode='r') as comparisons:
         reader = csv.DictReader(comparisons)
         for row in reader:
-            comparisonData.write(dumps(withRoles(
-                question=possible_questions[random.randint(0, len(possible_questions) - 1)].format(row['OriginalContent'], row['BadTranslation']),
-                answer=row["GoodTranslation"]
-            )))
+            comparisonData.write(dumps({
+                'messages': withRoles(
+                    question=possible_questions[random.randint(0, len(possible_questions) - 1)].format(row['OriginalContent'], row['BadTranslation']),
+                    answer=row["GoodTranslation"]
+                )
+            }))
             comparisonData.write("\n")
