@@ -5,3 +5,5 @@ command-template
 translations
 literature.jsonl
 __pycache__
+comparison.jsonl
+comparison.csv
