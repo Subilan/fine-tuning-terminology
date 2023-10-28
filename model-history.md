@@ -2,6 +2,15 @@
 
 This page shows the translation module training history.
 
+## on 23.10.28
+
+- Job: `ftjob-y1LTuP27Ms0Z794LLiufxQNA`
+- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8E95sXpG` (23.10.27)
+- Model (*result*):
+- Training File: `file-m5aOwtnc2vqugh6uj3bYAsML`
+- Trained Tokens:
+- Cost:
+
 ## on 23.10.27
 
 - Job: `ftjob-Fhe2x4BSkcSbYWOVeHJw7hnY`
