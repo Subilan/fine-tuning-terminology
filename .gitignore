@@ -6,4 +6,4 @@ translations
 literature.jsonl
 __pycache__
 comparison.jsonl
-comparison.csv
+comparison*.csv
