@@ -4,7 +4,7 @@ This page shows the translation module training history.
 
 ## on 23.10.28
 
-**Description:** The training file includes an `OriginalText` field, along with its `GoodTranslation` and `BadTranslation`. The prompt used in dataset asks GPT to optimize the `BadTranslation` provided, and the completion is set to the `GoodCompletion`.
+**Description:** The training file includes an `OriginalText` field, along with its `GoodTranslation` and `BadTranslation`. The prompt used in dataset asks GPT to optimize the `BadTranslation` provided, and the completion is set to the `GoodTranslation`.
 
 **Assessment:** *Kind of* notable. There seems to be less complex sentences that are not commonly used in Chinese. Some of the irregular usage in English can be translated correctly, thanks to the good or bad judgement mode. These changes make the result more natural and readable. But results that are perfect to read are rare.
 
