@@ -17,7 +17,7 @@ This page shows the translation module training history.
 
 ## on 23.10.27
 
-**Description:** The training file includes a number of Chinese-English sentence pairs. This training tried to improve the translation quality, giving short, separated sentences and the corresponding translation to GPT.
+**Description:** The training file includes a number of Chinese-English sentence pairs, generated automatically with `build_literature.py`, through splitting the sentences with final stops and making some extra arragement. This training tried to improve the translation quality, giving short, separated sentences and the corresponding translation to GPT.
 
 **Assessment:** Not notable. There are still many English sentences being translated directly to Chinese without modifying structure to fit the grammar and convention, causing weird reading experience.
 
