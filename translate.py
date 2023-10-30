@@ -1,4 +1,5 @@
 from argparse import ArgumentParser
+from generate_summary import default_system_message
 import openai
 
 parser = ArgumentParser(prog='get-translation')
@@ -10,7 +11,7 @@ args = parser.parse_args()
 
 prompt = args.prompt
 model = args.model
-system_content = 'You are a psychologist chatbot that can accurately translate the terminologies in literature in his area to Chinese.'
+system_content = args.system if args.system != None else default_system_message
 
 if prompt == None:
     print('No prompt!')
