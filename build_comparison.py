@@ -15,7 +15,7 @@ except:
     pass
 
 with open("comparison.jsonl", mode='a') as comparisonData:
-    with open("comparison.csv", mode='r') as comparisons:
+    with open("comparison_002.csv", mode='r', encoding="utf-8-sig") as comparisons:
         reader = csv.DictReader(comparisons)
         for row in reader:
             comparisonData.write(dumps({

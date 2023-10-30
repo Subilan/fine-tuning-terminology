@@ -2,6 +2,15 @@
 
 This page shows the translation module training history.
 
+## on 23.10.30
+
+- Job: `ftjob-ekgawjRMiEdXviLor38dzCJC`
+- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8ETNi3N8` (23.10.28)
+- Model (*result*):
+- Training File: `file-TvQPhtBx4zr9CchIDYWdcxdG`
+- Trained Tokens:
+- Cost:
+
 ## on 23.10.28
 
 **Description:** The training file includes an `OriginalText` field, along with its `GoodTranslation` and `BadTranslation`. The prompt used in dataset asks GPT to optimize the `BadTranslation` provided, and the completion is set to the `GoodTranslation`.
