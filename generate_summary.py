@@ -30,7 +30,7 @@ for originalText in to_translate:
         print(f"Building translation#{i+1:d}")
         command = "python3 ./translate.py {0} -m {1}".format(quote(input_question), latest_job['fine_tuned_model'])
         result = run(command, shell=True, stdout=PIPE)
-        result_row.extend(result.stdout.decode())
+        result_row.append(result.stdout.decode())
     result_rows.append(result_row)
     index += 1
 
