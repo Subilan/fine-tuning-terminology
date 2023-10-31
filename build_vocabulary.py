@@ -1,7 +1,7 @@
 import csv
 from random import randint
 from os import remove
-from fn import toJsonl, withRoles
+from fn import dumpLine, buildLine
 
 possible_questions = [
     "What is the translation of the psychological term {0} in Chinese?",
@@ -113,8 +113,8 @@ with open("vocabulary.jsonl", mode="a", encoding="utf-8") as file:
     with open("terminology.csv", newline='') as translations:
         reader = csv.DictReader(translations)
         for row in reader:
-            result = withRoles(
+            result = buildLine(
                 possible_questions[randint(0, len(possible_questions) - 1)].format(row["English"].lower()) + "\n\nTranslation:\n\n",
                 row["Chinese"] + " END"
             )
-            file.write(toJsonl(result))
+            file.write(dumpLine(result))
