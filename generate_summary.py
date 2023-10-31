@@ -15,23 +15,33 @@ to_translate = open("to_translate.txt", mode='r').readlines()
 
 result_rows = []
 
+repetition_count = 10
+
+result_pairs_header = ['原文']
+result_pairs_header.extend(['返回结果#{0}'.format(i + 1) for i in range(repetition_count)])
+
 index = 1
 # with open("summary/summary_{0}.csv".format(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")), encoding='utf-8-sig', mode='w+') as summary:
-for original in to_translate:
-    print(f"row: {index:d}")
-    input_question = default_prompt_template.format(original.replace('\n', ''))
-    command = "python3 ./translate.py {0} -m {1}".format(quote(input_question), latest_job['fine_tuned_model'])
-    print("> {0}".format(command))
-    result = run(command, shell=True, stdout=PIPE)
-    result_rows.append([
-        input_question,
-        result.stdout.decode(),
-        dumpSimple(buildPrompt("<>")),
-        latest_job['id'],
-        latest_job['trained_tokens'],
-        f'${0.008 * float(latest_job["trained_tokens"]) / 1000:f}',
-        latest_job['fine_tuned_model']
-    ])
+for originalText in to_translate:
+    print(f"Compiling row {index:d}")
+    input_question = default_prompt_template.format(originalText.replace('\n', ''))
+    result_row = [originalText]
+    for i in range(repetition_count):
+        print(f"Building translation#{i+1:d}")
+        command = "python3 ./translate.py {0} -m {1}".format(quote(input_question), latest_job['fine_tuned_model'])
+        result = run(command, shell=True, stdout=PIPE)
+        result_row.extend(result.stdout.decode())
+    result_rows.append(result_row)
     index += 1
 
-pandas.DataFrame(result_rows, columns=['请求文本', '返回结果', 'Prompt模板', 'Job ID', '训练消耗Token', '预估花费', '模型名称']).to_excel("summary/summary_{0}.xlsx".format(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")))
+with pandas.ExcelWriter(f"summary/summary_{datetime.datetime.now().strftime('%Y-%m-%d_%H:%M:%S'):s}.xlsx") as writer:
+    pandas.DataFrame(result_rows).to_excel(writer, sheet_name='ResultPairs', index=False, header=result_pairs_header)
+    pandas.DataFrame([
+        [
+            dumpSimple(buildPrompt(default_prompt_template.format("<原文>"))),
+            latest_job['id'],
+            latest_job['trained_tokens'],
+            f'${0.008 * float(latest_job["trained_tokens"]) / 1000:f}',
+            latest_job['fine_tuned_model']
+        ]
+    ]).to_excel(writer, sheet_name='Properties', index=False, header=['Prompt模板', 'Job ID', '消耗Token', '预估花费', '模型名称'])
