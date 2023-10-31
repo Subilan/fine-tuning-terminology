@@ -1,6 +1,6 @@
 from os import remove
 import csv
-from fn import dumps, withRoles
+from fn import dumps, buildLine
 import random
 
 possible_questions = [
@@ -19,7 +19,7 @@ with open("comparison.jsonl", mode='a') as comparisonData:
         reader = csv.DictReader(comparisons)
         for row in reader:
             comparisonData.write(dumps({
-                'messages': withRoles(
+                'messages': buildLine(
                     question=possible_questions[random.randint(0, len(possible_questions) - 1)].format(row['OriginalContent'], row['BadTranslation']),
                     answer=row["GoodTranslation"]
                 )
