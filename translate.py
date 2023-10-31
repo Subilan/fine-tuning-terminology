@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from generate_summary import default_system_message
+from fn import default_system_message
 import openai
 
 parser = ArgumentParser(prog='get-translation')
