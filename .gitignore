@@ -1,10 +1,12 @@
 terminology.csv
 vocabulary.jsonl
 .vscode
-command-template
+command-template.txt
 translations
 literature.jsonl
 __pycache__
 comparison.jsonl
 comparison*.csv
 .DS_Store
+summary
+to_translate.txt
