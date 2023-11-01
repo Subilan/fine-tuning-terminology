@@ -2,14 +2,25 @@
 
 This page shows the translation module training history.
 
+## on 23.11.01
+
+- Job: `ftjob-Tr2R7Bfuch2bZ1pu4qTvO0un`
+- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8FizWKFF` (23.10.31)
+- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8G3eEkRp`
+- Training File: `file-jOUAEAaiathHXEu2dRqZE1WE`
+- Trained Tokens: 24210
+- Cost: $0.2
+
 ## on 23.10.31
+
+This training file includes all the Chinese-English paragraph pairs of Unconsious Processes.
 
 - Job: `ftjob-GchsYN9k9q3kdgrbBnBw6yF5`
 - Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8FIntqdx` (23.10.30)
 - Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8FizWKFF`
 - Training File: `file-9kTobExs1yraPGmyMf6uJxtN`
 - Trained Tokens: 86718
-- Cost: $0.8
+- Cost: $0.7
 
 ## on 23.10.30
 
