@@ -7,3 +7,4 @@ summary
 to_translate.txt
 *.csv
 *.jsonl
+key.sh
