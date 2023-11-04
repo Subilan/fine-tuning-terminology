@@ -12,6 +12,10 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 latest_job = openai.FineTuningJob.list(limit=1).data[0]
 
+if latest_job.status != 'succeeded':
+    print("Fine-tuning job is not completed.")
+    exit()
+
 to_translate = open("to_translate.txt", mode='r').readlines()
 
 result_rows = []
