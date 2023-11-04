@@ -1,4 +1,4 @@
-lines = open("translations/separated.txt", mode='r').readlines()
+lines = open("translations/literature.txt", mode='r').readlines()
 
 lines_to_write = []
 
