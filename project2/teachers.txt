@@ -1,0 +1,1 @@
+2023/11/05 13:42:47 teacher training complete: model=gpt-3.5-turbo-0613, fine_tuned_model=ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj, trained_tokens=24144, estimated_cost=$0.19
