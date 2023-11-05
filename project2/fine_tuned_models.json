@@ -1,0 +1,46 @@
+{
+    "teacher": [
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-kAvugUYSHuOx2FoLGMsk0yU8",
+            "model": "gpt-3.5-turbo-0613",
+            "created_at": 1699162392,
+            "finished_at": 1699162962,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-veks9OpKGWLa1QQn47s5YlJ8"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-ujQ4GIa0QrcuOik14SPTpE5p",
+            "hyperparameters": {
+                "n_epochs": 3
+            },
+            "trained_tokens": 24144,
+            "error": null
+        }
+    ],
+    "translator": [
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-i6Qut4d76BMesa4PNYMFPiTu",
+            "model": "gpt-3.5-turbo-0613",
+            "created_at": 1699162089,
+            "finished_at": 1699163584,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-0613:personal:translator:8HQMDKHY",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-4aeZR7UOVWxaGhZUSQAOI5AR"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-pt8hyfWKpttry4jcOVIU20qp",
+            "hyperparameters": {
+                "n_epochs": 5
+            },
+            "trained_tokens": 42345,
+            "error": null
+        }
+    ]
+}

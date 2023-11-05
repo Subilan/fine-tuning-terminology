@@ -3,6 +3,7 @@ import openai
 import argparse
 import datetime
 from time import sleep
+import json
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--file')
@@ -30,6 +31,11 @@ while 1:
     retrieved = openai.FineTuningJob.retrieve(result.id)
     print(f'[{datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S"):s}] {retrieved.status:s}')
     if retrieved.status == 'succeeded':
+        with open('fine_tuned_models.json', 'r+', encoding='utf-8') as ft_models:
+            data = json.load(ft_models)
+            data[args.target].append(retrieved)
+            ft_models.truncate(0)
+            ft_models.write(json.dumps(data))
         print(f'{args.target:s} training complete: model={result.model:s}, fine_tuned_model={retrieved.fine_tuned_model:s}, trained_tokens={retrieved.trained_tokens:d}, estimated_cost=${retrieved.trained_tokens / 1000 * 0.008:.2f}')
         break
     sleep(1.0)
