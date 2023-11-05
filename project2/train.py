@@ -5,27 +5,44 @@ import datetime
 from time import sleep
 import json
 
+from models import latest_teacher_model, latest_translator_model
+
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--file')
-parser.add_argument('-m', '--model')
 parser.add_argument('-n', '--nepochs')
 parser.add_argument('-t', '--target')
+parser.add_argument('-m', '--model')
 args = parser.parse_args()
 
 openai.api_key = OPENAI_API_KEY
 
-if args.file == None or args.model == None:
+if args.file == None or args.target == None:
     print('missing required arguments')
     exit()
+    
+if args.target != 'teacher' and args.target != 'translator':
+    print('invalid training target')
+    exit()
+
+target_model = latest_teacher_model if args.target == 'teacher' else latest_translator_model
+
+if args.model != None:
+    target_model = args.model
 
 result = openai.FineTuningJob.create(
     training_file=args.file,
-    model=args.model,
+    model=target_model,
     suffix=args.target,
-    hyperparameters={'n_epochs': int(args.nepochs) if args.nepochs != None else 3}
+    hyperparameters={'n_epochs': int(args.nepochs) if args.nepochs != None else 'auto'}
 )
 
-print(f'created: ({args.target:s}) <{result.object:s}> {result.id:s} based on {result.model:s} at {datetime.datetime.fromtimestamp(result.created_at).strftime("%Y/%m/%d %H:%M:%S"):s}')
+try:
+    print(f'created: ({args.target:s}) <{result.object:s}> {result.id:s} based on {result.model:s} at {datetime.datetime.fromtimestamp(result.created_at).strftime("%Y/%m/%d %H:%M:%S"):s}')
+except:
+    print('Unable to format creation message. Crucial information is as follows.')
+    print('args.target=' + args.target)
+    print('result.id=' + result.id)
+    print('result.model=' + result.model)
 
 while 1:
     retrieved = openai.FineTuningJob.retrieve(result.id)
