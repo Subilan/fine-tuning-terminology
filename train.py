@@ -2,11 +2,7 @@ import os
 import openai
 from sys import argv
 from argparse import ArgumentParser
-
-apikey = os.getenv("OPENAI_API_KEY")
-
-if apikey == None:
-    print("Warning: Missing required enviromental variable $OPENAI_API_KEY. Calling to OpenAI API won't work properly.")
+from apikey import OPENAI_API_KEY
 
 parser = ArgumentParser(
     prog="train",
@@ -22,7 +18,7 @@ parser.add_argument('-cu', '--contentUser')
 parser.add_argument('-cs', '--contentSystem')
 args = parser.parse_args()
 
-openai.api_key = apikey
+openai.api_key = OPENAI_API_KEY
 
 def main():
     match (args.command):
