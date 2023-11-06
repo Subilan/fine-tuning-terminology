@@ -9,3 +9,5 @@ to_translate*.txt
 *.jsonl
 key.sh
 apikey.py
+*.docx
+pairs.json
