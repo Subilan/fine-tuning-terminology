@@ -60,6 +60,26 @@
             },
             "trained_tokens": 32628,
             "error": null
+        },
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-yVZyLZJjEeRxRgRB56RKvuZy",
+            "model": "ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj",
+            "created_at": 1699280494,
+            "finished_at": 1699285079,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-0613:personal:teacher:8HvxnI5I",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-zPhTPaxy8tSLLU15tI8fm87f"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-tZgxjTBAg69lDspxiFre5QWV",
+            "hyperparameters": {
+                "n_epochs": 3
+            },
+            "trained_tokens": 1906683,
+            "error": null
         }
     ],
     "translator": [
