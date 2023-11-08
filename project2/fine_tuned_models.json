@@ -80,6 +80,28 @@
             },
             "trained_tokens": 1906683,
             "error": null
+        },
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-sMgzZ9AGyteO75m7LA8izs0M",
+            "model": "ft:gpt-3.5-turbo-0613:personal:teacher:8HvxnI5I",
+            "created_at": 1699352780,
+            "finished_at": 1699360641,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-0613:personal:teacher:8IFcZ4SZ",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-nhiizU60pW3Og6BD4OYPiTPG"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-GBwG5ZrUfQ91yi6SUYXZEqWx",
+            "hyperparameters": {
+                "n_epochs": 3,
+                "batch_size": 1,
+                "learning_rate_multiplier": 2
+            },
+            "trained_tokens": 53529,
+            "error": null
         }
     ],
     "translator": [
