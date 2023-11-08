@@ -14,7 +14,10 @@ def getLanguage(text):
 collection = []
 collectionCursor = -1
 
-for entry in os.scandir('origin/docx'):
+entries = [x for x in os.scandir('origin/docx')]
+
+for e in range(len(entries)):
+    entry = entries[e]
     paragraphs = docx.Document(f'origin/docx/{entry.name:s}').paragraphs
     currentLanguage = None
     for i in range(len(paragraphs)):
