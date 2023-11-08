@@ -9,7 +9,7 @@ try:
 except:
     pass
 
-with open("origin/pairs.json", mode='r', encoding='utf-8') as pairs:
+with open("origin/pairs-full.json", mode='r', encoding='utf-8') as pairs:
     data = json.load(pairs)
     with open('datasets/teacher_v3.jsonl', mode='a+') as teacher:
         for d in data:
