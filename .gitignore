@@ -10,4 +10,4 @@ to_translate*.txt
 key.sh
 apikey.py
 *.docx
-pairs.json
+pairs*.json
