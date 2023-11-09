@@ -102,6 +102,71 @@
             },
             "trained_tokens": 53529,
             "error": null
+        },
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-GSt45ehDjKPLPnjKMQxGbgXG",
+            "model": "gpt-3.5-turbo-1106",
+            "created_at": 1699432899,
+            "finished_at": 1699444730,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-1106:personal:teacher:8IbUp9iq",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-hkUfhVjVIDcO6weF8eKuyZl7"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-rayZVSRjfmX8rdrIzk66F99G",
+            "hyperparameters": {
+                "n_epochs": 3,
+                "batch_size": 1,
+                "learning_rate_multiplier": 2
+            },
+            "trained_tokens": 56388
+        },
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-gQGS8IQ0AeKwRm36ex871JSx",
+            "model": "ft:gpt-3.5-turbo-1106:personal:teacher:8IbUp9iq",
+            "created_at": 1699445695,
+            "finished_at": 1699454362,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-1106:personal:teacher:8Ie0AKCa",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-3EidZOChDX3VaHGiQaukQtNt"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-6ZepAV9IePcOwij0sCk19Wzb",
+            "hyperparameters": {
+                "n_epochs": 3,
+                "batch_size": 1,
+                "learning_rate_multiplier": 2
+            },
+            "trained_tokens": 41940,
+            "error": null
+        },
+        {
+            "object": "fine_tuning.job",
+            "id": "ftjob-HiYlNi0VmGaneaMb8r1R2LgE",
+            "model": "ft:gpt-3.5-turbo-1106:personal:teacher:8Ie0AKCa",
+            "created_at": 1699455906,
+            "finished_at": 1699464017,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-1106:personal:teacher:8IgVv9HS",
+            "organization_id": "org-EwyTc0T1gEhZEDzZa0sq4Kpn",
+            "result_files": [
+                "file-AaLtKy3SAcxaBlmTSJEiBnLr"
+            ],
+            "status": "succeeded",
+            "validation_file": null,
+            "training_file": "file-iqJpY9knDkiNTC8xWeZW1aE0",
+            "hyperparameters": {
+                "n_epochs": 3,
+                "batch_size": 1,
+                "learning_rate_multiplier": 2
+            },
+            "trained_tokens": 351060,
+            "error": null
         }
     ],
     "translator": [
