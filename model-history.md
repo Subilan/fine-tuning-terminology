@@ -1,94 +1,147 @@
 # Module History
 
-This page shows the translation module training history.
+This page shows the translation module training history. Total cost:
+$$ \frac{2797374\,\mathrm{token}}{1000} \times \$0.008/\mathrm{ktoken} = \$22.378992 $$
+
+## on 2023.11.09
+- Job ID: `ftjob-HiYlNi0VmGaneaMb8r1R2LgE`
+- 继承自: `ft:gpt-3.5-turbo-1106:personal:teacher:8Ie0AKCa`
+- 产出模型: `ft:gpt-3.5-turbo-1106:personal:teacher:8IgVv9HS`
+- 训练数据集: `file-iqJpY9knDkiNTC8xWeZW1aE0`
+- 消耗Token: 351060
+- 预估消耗费用: $2.81
+
+## on 2023.11.08
+
+- Job ID: `ftjob-GSt45ehDjKPLPnjKMQxGbgXG`
+- 继承自: `gpt-3.5-turbo-1106`
+- 产出模型: `ft:gpt-3.5-turbo-1106:personal:teacher:8IbUp9iq`
+- 训练数据集: `file-rayZVSRjfmX8rdrIzk66F99G`
+- 消耗Token: 56388
+- 预估消耗费用: $0.45
+
+---
+
+- Job ID: `ftjob-gQGS8IQ0AeKwRm36ex871JSx`
+- 继承自: `ft:gpt-3.5-turbo-1106:personal:teacher:8IbUp9iq`
+- 产出模型: `ft:gpt-3.5-turbo-1106:personal:teacher:8Ie0AKCa`
+- 训练数据集: `file-6ZepAV9IePcOwij0sCk19Wzb`
+- 消耗Token: 41940
+- 预估消耗费用: $0.34
+
+## on 2023.11.07
+- Job ID: `ftjob-sMgzZ9AGyteO75m7LA8izs0M`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal:teacher:8HvxnI5I`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:teacher:8IFcZ4SZ`
+- 训练数据集: `file-GBwG5ZrUfQ91yi6SUYXZEqWx`
+- 消耗Token: 53529
+- 预估消耗费用: $0.43
+
+## on 2023.11.06
+
+- Job ID: `ftjob-yVZyLZJjEeRxRgRB56RKvuZy`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:teacher:8HvxnI5I`
+- 训练数据集: `file-tZgxjTBAg69lDspxiFre5QWV`
+- 消耗Token: 1906683
+- 预估消耗费用: $15.25
+
+## on 2023.11.05
+- Job ID: `ftjob-kAvugUYSHuOx2FoLGMsk0yU8`
+- 继承自: `gpt-3.5-turbo-0613`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj`
+- 训练数据集: `file-ujQ4GIa0QrcuOik14SPTpE5p`
+- 消耗Token: 24144
+- 预估消耗费用: $0.19
+---
+- Job ID: `ftjob-SnWFnSiYZQleKKJSUMmQZySR`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:teacher:8HXYD6oB`
+- 训练数据集: `file-oMPng5AinwMbUUhBjbQvQBIf`
+- 消耗Token: 32016
+- 预估消耗费用: $0.26
+---
+- Job ID: `ftjob-cuOn0coyHbNtFlaIfMGbaagD`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal:teacher:8HQCByFj`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:teacher:8HXv0CDJ`
+- 训练数据集: `file-KShUnJYZNPypFwyF7i5CxNNG`
+- 消耗Token: 32628
+- 预估消耗费用: $0.26
+---
+- Job ID: `ftjob-i6Qut4d76BMesa4PNYMFPiTu`
+- 继承自: `gpt-3.5-turbo-0613`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal:translator:8HQMDKHY`
+- 训练数据集: `file-pt8hyfWKpttry4jcOVIU20qp`
+- 消耗Token: 42345
+- 预估消耗费用: $0.34
 
 ## on 23.11.04
 
-- Job: `ftjob-qG6mSKXp6xQRJziATYXtUUbw`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8G3eEkRp` (23.11.01)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8HA2kFh2`
-- Training File: `file-qJn13Bm4fZBTb2RUIJnF82ZU`
-- Trained Tokens: 45486
-- Cost: $0.4
+- Job ID: `ftjob-qG6mSKXp6xQRJziATYXtUUbw`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8G3eEkRp` (23.11.01)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8HA2kFh2`
+- 训练数据集: `file-qJn13Bm4fZBTb2RUIJnF82ZU`
+- 消耗Token: 45486
+- 预估消耗费用: $0.36
 
 ## on 23.11.01
 
-- Job: `ftjob-Tr2R7Bfuch2bZ1pu4qTvO0un`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8FizWKFF` (23.10.31)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8G3eEkRp`
-- Training File: `file-jOUAEAaiathHXEu2dRqZE1WE`
-- Trained Tokens: 24210
-- Cost: $0.2
+- Job ID: `ftjob-Tr2R7Bfuch2bZ1pu4qTvO0un`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8FizWKFF` (23.10.31)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8G3eEkRp`
+- 训练数据集: `file-jOUAEAaiathHXEu2dRqZE1WE`
+- 消耗Token: 24210
+- 预估消耗费用: $0.19
 
 ## on 23.10.31
 
-This training file includes all the Chinese-English paragraph pairs of Unconsious Processes.
-
-- Job: `ftjob-GchsYN9k9q3kdgrbBnBw6yF5`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8FIntqdx` (23.10.30)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8FizWKFF`
-- Training File: `file-9kTobExs1yraPGmyMf6uJxtN`
-- Trained Tokens: 86718
-- Cost: $0.7
+- Job ID: `ftjob-GchsYN9k9q3kdgrbBnBw6yF5`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8FIntqdx` (23.10.30)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8FizWKFF`
+- 训练数据集: `file-9kTobExs1yraPGmyMf6uJxtN`
+- 消耗Token: 86718
+- 预估消耗费用: $0.69
 
 ## on 23.10.30
 
-- Job: `ftjob-ekgawjRMiEdXviLor38dzCJC`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8ETNi3N8` (23.10.28)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8FIntqdx`
-- Training File: `file-TvQPhtBx4zr9CchIDYWdcxdG`
-- Trained Tokens: 14616
-- Cost: $0.1
+- Job ID: `ftjob-ekgawjRMiEdXviLor38dzCJC`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8ETNi3N8` (23.10.28)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8FIntqdx`
+- 训练数据集: `file-TvQPhtBx4zr9CchIDYWdcxdG`
+- 消耗Token: 14616
+- 预估消耗费用: $0.12
 
 ## on 23.10.28
 
-**Description:** The training file includes an `OriginalText` field, along with its `GoodTranslation` and `BadTranslation`. The prompt used in dataset asks GPT to optimize the `BadTranslation` provided, and the completion is set to the `GoodTranslation`.
-
-**Assessment:** *Kind of* notable. There seems to be less complex sentences that are not commonly used in Chinese. Some of the irregular usage in English can be translated correctly, thanks to the good or bad judgement mode. These changes make the result more natural and readable. But results that are perfect to read are rare.
-
-- Job: `ftjob-y1LTuP27Ms0Z794LLiufxQNA`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8E95sXpG` (23.10.27)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8ETNi3N8`
-- Training File: `file-m5aOwtnc2vqugh6uj3bYAsML`
-- Trained Tokens: 14064
-- Cost: $0.1
+- Job ID: `ftjob-y1LTuP27Ms0Z794LLiufxQNA`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8E95sXpG` (23.10.27)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8ETNi3N8`
+- 训练数据集: `file-m5aOwtnc2vqugh6uj3bYAsML`
+- 消耗Token: 14064
+- 预估消耗费用: $0.11
 
 ## on 23.10.27
 
-**Description:** The training file includes a number of Chinese-English sentence pairs, generated automatically with `build_literature.py`, through splitting the sentences with final stops and making some extra arragement. This training tried to improve the translation quality, giving short, separated sentences and the corresponding translation to GPT.
-
-**Assessment:** Not notable. There are still many English sentences being translated directly to Chinese without modifying structure to fit the grammar and convention, causing weird reading experience.
-
-**Comparing to GPT-4 Scholar:** On the same level, or lower.
-
-- Job: `ftjob-Fhe2x4BSkcSbYWOVeHJw7hnY`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8DsAygwF` (23.10.26)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8E95sXpG`
-- Training File: `file-blDmMfOyVVTRhO9Dd55Y2wxt`
-- Trained Tokens: 24558
-- Cost: $0.2
+- Job ID: `ftjob-Fhe2x4BSkcSbYWOVeHJw7hnY`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8DsAygwF` (23.10.26)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8E95sXpG`
+- 训练数据集: `file-blDmMfOyVVTRhO9Dd55Y2wxt`
+- 消耗Token: 24558
+- 预估消耗费用: $0.20
 
 ## on 23.10.26
 
-**Description:** This training tried to scale up the vocabulary, and at the same time solidate the previous cognition.
-
-**Assessment:** Not notable, but possibly working (in terminology mapping).
-
-- Job: `ftjob-sTy0XoGOAjBGugCzlIU6IlZ9`
-- Model (*extends*): `ft:gpt-3.5-turbo-0613:personal::8DpUIZAv` (23.10.25)
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8DsAygwF`
-- Training File: `file-pxHKrUtAfzSl6nkVE3K8fDzj`
-- Trained Tokens: 23868
-- Cost: $0.2
+- Job ID: `ftjob-sTy0XoGOAjBGugCzlIU6IlZ9`
+- 继承自: `ft:gpt-3.5-turbo-0613:personal::8DpUIZAv` (23.10.25)
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8DsAygwF`
+- 训练数据集: `file-pxHKrUtAfzSl6nkVE3K8fDzj`
+- 消耗Token: 23868
+- 预估消耗费用: $0.19
 
 ## on 23.10.25
 
-**Description:** This is the initial training of the `gpt-3.5-turbo` model. The training file includes some of the psychological terminologies that may be used in literature.
-
-**Assessment:** Not notable. Phrases in training file are not frequently used by the given essay.
-
-- Job: `ftjob-1Ifh6MVvKlcs6c1hijjzKMU7`
-- Model (*result*): `ft:gpt-3.5-turbo-0613:personal::8DpUIZAv`
-- Training File: `file-C5y6HQocnwIAbPoQS3jfrP9h`
-- Trained Tokens: 23121
-- Cost: $0.2
+- Job ID: `ftjob-1Ifh6MVvKlcs6c1hijjzKMU7`
+- 产出模型: `ft:gpt-3.5-turbo-0613:personal::8DpUIZAv`
+- 训练数据集: `file-C5y6HQocnwIAbPoQS3jfrP9h`
+- 消耗Token: 23121
+- 预估消耗费用: $0.18
